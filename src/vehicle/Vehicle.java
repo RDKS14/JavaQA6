@@ -1,6 +1,8 @@
 package vehicle;
 
-public class Vehicle {
+public abstract class Vehicle {
+
+
     private String name;
     private int age;
     private String brand;
@@ -80,4 +82,5 @@ public class Vehicle {
     public void setDoors(int doors) {
         this.doors = doors;
     }
+    public abstract double totalBill();
 }

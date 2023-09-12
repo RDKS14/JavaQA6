@@ -2,6 +2,11 @@ package vehicle;
 
 public class Motorbike extends Vehicle{
 
+    @Override
+    public double totalBill() {
+        return 500;
+    }
+
     public Motorbike() {
     }
 

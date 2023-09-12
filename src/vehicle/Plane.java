@@ -1,6 +1,12 @@
 package vehicle;
 
 public class Plane extends Vehicle {
+
+    @Override
+    public double totalBill() {
+        return 100000;
+    }
+
     public Plane() {
     }
 

@@ -41,14 +41,9 @@ public class Garage extends Vehicle {
     }
 
     public double totalBill() {
-        double total = 0d;
+        double total = 0;
         for (Vehicle vehicle : vehicles) {
-            if (vehicle instanceof Car)
-                total += 1000d;
-            else if (vehicle instanceof Plane)
-                total+= 1000000;
-            else
-                total += 500d;
+          total += vehicle.totalBill();
         }
         return total;
     }
