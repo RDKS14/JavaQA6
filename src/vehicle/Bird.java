@@ -1,0 +1,12 @@
+package vehicle;
+
+public class Bird implements Flyable{
+
+    public void fly(){
+        System.out.println("FlapFlap");
+
+    }
+
+
+
+}

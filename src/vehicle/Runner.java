@@ -1,5 +1,7 @@
 package vehicle;
 
+import java.lang.reflect.Array;
+
 public class Runner {
 
     public static void main(String[] args) {
@@ -14,27 +16,58 @@ public class Runner {
   //      System.out.println(c);
 
         Motorbike d = new Motorbike("Ninja", 6 , "Kowazaki", 2, 0, 0);
+        Plane e = new Plane("Boeing" , 6 , "Tui" , 6, 2, 2);
 
-  //      System.out.println(d);
-
-        Garage g = new Garage();
-
-        g.addVehicle(c);
-        g.addVehicle(d);
-
-        System.out.println(g);
-
- //       g.removeByID(1);
- //       System.out.println(g);
-
-//        g.empty();
-
+//  //      System.out.println(d);
+//
+//        Garage g = new Garage();
+//
+//        g.addVehicle(c);
+//        g.addVehicle(d);
+//
 //        System.out.println(g);
+//
+// //       g.removeByID(1);
+// //       System.out.println(g);
+//
+////        g.empty();
+//
+////        System.out.println(g);
+//
+//        System.out.println(g.totalBill());
+//        g.removeByType("Car");
+//        System.out.println(g);
+//
+//
+//        Bird b = new Bird();
+//
+//        Plane p = new Plane();
+//
+//        Flyable[] flyable = {b,p};
+//        for (Flyable a : flyable) {
+//            a.fly();
+//        }
 
-        System.out.println(g.totalBill());
-        g.removeByType("Car");
-        System.out.println(g);
+//        Shed cg = new Shed();
+          Car arona = new Car();
+//        cg.setVehicle(arona);
+//
+//        Vehicle myCar = cg.getVehicle();
+//
+//        System.out.println(myCar);
+
+        Shed<Vehicle> shed = new Shed<>();
+        shed.setVehicle(c);
+
+        shed.getinfo();
+
+        Shed<Motorbike> shed2 = new Shed<>();
+        shed2.setVehicle(d);
+
+        shed2.getinfo();
+
 
     }
+
 }
 
