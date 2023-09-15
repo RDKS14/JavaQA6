@@ -1,5 +1,7 @@
 package vehicle;
 
+import exceptions.VehiclesNotFound;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +37,22 @@ public class Garage extends Vehicle {
         return false;
     }
 
-    public void empty(){
+    public String findByID(int id) throws VehiclesNotFound {
+        try {
+            for (Vehicle vehicle : vehicles) {
+                if (vehicle.getID() == id) {
+                    return "details" + vehicle;
+                }
+                throw new VehiclesNotFound("Not in this Garage " + id);
+            }
+        } catch (VehiclesNotFound e) {
+            System.out.println(e.getMessage());
+
+        }
+        return null;
+    }
+
+    public void empty() {
         vehicles.clear();
 
     }
@@ -43,7 +60,7 @@ public class Garage extends Vehicle {
     public double totalBill() {
         double total = 0;
         for (Vehicle vehicle : vehicles) {
-          total += vehicle.totalBill();
+            total += vehicle.totalBill();
         }
         return total;
     }
@@ -67,10 +84,10 @@ public class Garage extends Vehicle {
 
     }
 
-        @Override
-        public String toString () {
-            return "Garage{" +
-                    "vehicle=" + vehicles +
-                    '}';
-        }
+    @Override
+    public String toString() {
+        return "Garage{" +
+                "vehicle=" + vehicles +
+                '}';
     }
+}
