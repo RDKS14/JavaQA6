@@ -18,7 +18,7 @@ public class Runner {
         //      System.out.println(c);
 
         Motorbike d = new Motorbike("Ninja", 6, "Kowazaki", 2, 0, 0);
-        Plane e = new Plane("Boeing", 6, "Tui", 6, 2, 2);
+        Plane r = new Plane("Boeing", 6, "Tui", 6, 2, 2);
 
         //     System.out.println(d);
 
@@ -67,8 +67,11 @@ public class Runner {
 
         shed2.getinfo();
 
-        System.out.println(g.findByID(8));
+        try {
+            System.out.println(g.findByID(8));
+        } catch (VehiclesNotFound e) {
+            System.out.println(e.getMessage());
+        }
     }
-
 }
 

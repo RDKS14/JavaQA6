@@ -38,18 +38,12 @@ public class Garage extends Vehicle {
     }
 
     public String findByID(int id) throws VehiclesNotFound {
-        try {
-            for (Vehicle vehicle : vehicles) {
-                if (vehicle.getID() == id) {
-                    return "details" + vehicle;
-                }
-                throw new VehiclesNotFound("Not in this Garage " + id);
+        for (Vehicle vehicle : vehicles) {
+            if (vehicle.getID() == id) {
+                return "details" + vehicle;
             }
-        } catch (VehiclesNotFound e) {
-            System.out.println(e.getMessage());
-
         }
-        return null;
+        throw new VehiclesNotFound("Not in this Garage " + id);
     }
 
     public void empty() {
