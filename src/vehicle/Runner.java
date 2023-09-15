@@ -1,12 +1,10 @@
 package vehicle;
 
-import java.lang.reflect.Array;
-
 import exceptions.VehiclesNotFound;
 
 public class Runner {
 
-    public static void main(String[] args) throws VehiclesNotFound {
+    public static void main(String[] args) {
         Car c = new Car();
 
         c.setName("ARONA");
@@ -26,6 +24,7 @@ public class Runner {
 
         g.addVehicle(c);
         g.addVehicle(d);
+        g.addVehicle(r);
 
         //     System.out.println(g);
         //      g.removeByID(1);
